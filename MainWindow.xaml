@@ -5,21 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFDemo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="200" Width="200">
-    <Grid >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <Button Content="Button1" ></Button>
-        <Button Content="Button2" Grid.Column="1" Grid.RowSpan="2"></Button>
-        <Button Content="Button3" Grid.Row="1"></Button>
-        <Button Content="Button4" Grid.Row="2" Grid.ColumnSpan="2"></Button>
-    </Grid>
+        Title="MainWindow"  >
+    <InkCanvas EditingMode="Select">
+    </InkCanvas>
 
 </Window>
