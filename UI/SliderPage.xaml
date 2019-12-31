@@ -1,11 +1,12 @@
-﻿<Window x:Class="WPFDemo.StyleOrTemplate.SliderWindow"
+﻿<Page x:Class="WPFDemo.UI.SliderPage"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="SliderWindow" Height="150" Width="200">
-    <Window.Resources>
+        Background="White"
+        Title="SliderPage" Height="150" Width="200">
+    <Page.Resources>
         <Style TargetType="{x:Type Thumb}" x:Key="SliderThumbStyle">
             <Setter Property="SnapsToDevicePixels" Value="True"/>
             <Setter Property="OverridesDefaultStyle" Value="True"/>
@@ -70,11 +71,11 @@
                 </Setter.Value>
             </Setter>
         </Style>
-    </Window.Resources>
+    </Page.Resources>
     <Grid>
         <Slider Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center"
                 SnapsToDevicePixels="True" Maximum="10" MinHeight="100"
                 Style="{DynamicResource SliderStyle1}">
         </Slider>
     </Grid>
-</Window>
+</Page>

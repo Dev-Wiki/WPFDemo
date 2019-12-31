@@ -7,22 +7,70 @@
         Title="MainWindow" SizeToContent="WidthAndHeight" >
     <Window.Resources>
     </Window.Resources>
-    <Grid Width="500" Height="200">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="100"/>
-        </Grid.ColumnDefinitions>
-        <Button x:Name="CustomStyle" Content="CustomStyle" Height="32" Width="80"
-                Click="CustomStyle_OnClick"/>
-    </Grid>
+    <TabControl TabStripPlacement="Left" MinWidth="500" MinHeight="300">
+        <TabItem >
+            <TabItem.Header >
+                <TextBlock Text="UI"/>
+            </TabItem.Header>
+            <TabItem.Content>
+                <TabControl >
+                    <TabItem Header="Slider">
+                        <Frame Source="UI/SliderPage.xaml"/>
+                    </TabItem>
+                    <TabItem Header="Image">
+                    </TabItem>
+                </TabControl>
+            </TabItem.Content>
+        </TabItem>
+        <TabItem>
+            <TabItem.Header>
+                <TextBlock Text="Data"/>
+            </TabItem.Header>
+            <TabItem.Content>
+                <Grid  Width="500" Height="200" ShowGridLines="True">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button 
+                        Content="DataBinding" x:Name="DataBindingBtn"
+                        Click="DataBindingBtn_OnClick"
+                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </TabItem.Content>
+        </TabItem>
+        <TabItem>
+            <TabItem.Header>
+                <TextBlock Text="Network"/>
+            </TabItem.Header>
+            <TabItem.Content>
+                <Grid Width="500" Height="200">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                </Grid>
+            </TabItem.Content>
+        </TabItem>
+    </TabControl>
 </Window>

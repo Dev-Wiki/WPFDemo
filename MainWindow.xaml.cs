@@ -1,5 +1,4 @@
 ﻿using System.Windows;
-using WPFDemo.StyleOrTemplate;
 
 namespace WPFDemo {
     /// <summary>
@@ -10,9 +9,7 @@ namespace WPFDemo {
             InitializeComponent();
         }
 
-        private void CustomStyle_OnClick(object sender, RoutedEventArgs e) {
-            SliderWindow window = new SliderWindow();
-            window.ShowDialog();
+        private void DataBindingBtn_OnClick(object sender, RoutedEventArgs e) {
         }
     }
 }
