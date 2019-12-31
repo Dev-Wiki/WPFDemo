@@ -24,5 +24,20 @@ namespace WPFDemo.UI
         {
             InitializeComponent();
         }
+
+        private void ImageControl_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
+        }
+
+        private void ImageControl_OnMouseLeftButtonUp(object sender, MouseButtonEventArgs e) {
+        }
+
+        private void ImageControl_OnMouseMove(object sender, MouseEventArgs e) {
+        }
+
+        private void ImageControl_OnMouseWheel(object sender, MouseWheelEventArgs e) {
+        }
+
+        private void OpenBtn_OnClick(object sender, RoutedEventArgs e) {
+        }
     }
 }

@@ -8,7 +8,28 @@
       Background="White"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ImagePage">
-    <Grid>
-        
-    </Grid>
+    <StackPanel>
+        <ScrollViewer HorizontalAlignment="Center" VerticalAlignment="Center"
+            HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled"
+            Background="White" Focusable="False">
+            <ContentControl 
+                x:Name="ImageControl"
+                MouseLeftButtonDown="ImageControl_OnMouseLeftButtonDown"
+                MouseLeftButtonUp="ImageControl_OnMouseLeftButtonUp"
+                MouseMove="ImageControl_OnMouseMove"
+                MouseWheel="ImageControl_OnMouseWheel">
+                <Image x:Name="PreImage" Width="300" Height="300" Stretch="Uniform"
+                       Source="{StaticResource HeaderImage}">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform/>
+                            <ScaleTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+            </ContentControl>
+        </ScrollViewer>
+
+        <Button x:Name="OpenBtn" Click="OpenBtn_OnClick"/>
+    </StackPanel>
 </Page>
