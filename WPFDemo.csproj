@@ -54,13 +54,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DataBinding\DataBinding.xaml.cs">
-      <DependentUpon>DataBinding.xaml</DependentUpon>
+    <Compile Include="DataBinding\DataBindingPage.xaml.cs">
+      <DependentUpon>DataBindingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataPage.xaml.cs">
+      <DependentUpon>DataPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Network\NeworkPage.xaml.cs">
+      <DependentUpon>NeworkPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ImagePage.xaml.cs">
+      <DependentUpon>ImagePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\SliderPage.xaml.cs">
       <DependentUpon>SliderPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="DataBinding\DataBinding.xaml">
+    <Compile Include="UI\UIPage.xaml.cs">
+      <DependentUpon>UIPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="DataBinding\DataBindingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Data\DataPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -76,7 +92,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Network\NeworkPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ImagePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\SliderPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UIPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

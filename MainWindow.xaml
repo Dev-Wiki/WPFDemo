@@ -4,73 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" SizeToContent="WidthAndHeight" >
+        d:DesignHeight="450" d:DesignWidth="800"
+        Width="800" Height="450"
+        Title="MainWindow" >
     <Window.Resources>
     </Window.Resources>
-    <TabControl TabStripPlacement="Left" MinWidth="500" MinHeight="300">
-        <TabItem >
-            <TabItem.Header >
-                <TextBlock Text="UI"/>
-            </TabItem.Header>
-            <TabItem.Content>
-                <TabControl >
-                    <TabItem Header="Slider">
-                        <Frame Source="UI/SliderPage.xaml"/>
-                    </TabItem>
-                    <TabItem Header="Image">
-                    </TabItem>
-                </TabControl>
-            </TabItem.Content>
+    <TabControl TabStripPlacement="Left">
+        <TabItem Header="UI">
+            <Frame Source="UI/UIPage.xaml"/>
         </TabItem>
-        <TabItem>
-            <TabItem.Header>
-                <TextBlock Text="Data"/>
-            </TabItem.Header>
-            <TabItem.Content>
-                <Grid  Width="500" Height="200" ShowGridLines="True">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Button 
-                        Content="DataBinding" x:Name="DataBindingBtn"
-                        Click="DataBindingBtn_OnClick"
-                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                </Grid>
-            </TabItem.Content>
+        <TabItem Header="Data">
+            <Frame Source="Data/DataPage.xaml"/>
         </TabItem>
-        <TabItem>
-            <TabItem.Header>
-                <TextBlock Text="Network"/>
-            </TabItem.Header>
-            <TabItem.Content>
-                <Grid Width="500" Height="200">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                </Grid>
-            </TabItem.Content>
+        <TabItem Header="Network">
+            <Frame Source="Network/NeworkPage.xaml"/>
         </TabItem>
     </TabControl>
 </Window>
