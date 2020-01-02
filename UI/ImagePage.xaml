@@ -10,6 +10,7 @@
       Title="ImagePage">
     <StackPanel>
         <ScrollViewer HorizontalAlignment="Center" VerticalAlignment="Center"
+                      x:Name="ImageScroll"
             HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled"
             Background="Transparent" Focusable="False" Width="300" Cursor="SizeAll">
             <ContentControl 
@@ -18,8 +19,8 @@
                 MouseLeftButtonUp="ImageControl_OnMouseLeftButtonUp"
                 MouseMove="ImageControl_OnMouseMove"
                 MouseWheel="ImageControl_OnMouseWheel">
-                <Image x:Name="PreImage" Stretch="Uniform" RenderOptions.BitmapScalingMode="NearestNeighbor"
-                       Source="{StaticResource HeaderImage}">
+                <Image x:Name="PreImage" Stretch="Fill"
+                       Source="{StaticResource HeaderImage512}">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <TranslateTransform/>
@@ -30,6 +31,9 @@
             </ContentControl>
         </ScrollViewer>
 
-        <Button x:Name="OpenBtn" Click="OpenBtn_OnClick"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0, 16, 0, 0">
+            <Button x:Name="OpenBtn" Content="Open" Click="OpenBtn_OnClick"/>
+            <Button x:Name="RestBtn" Content="Rest" Click="RestBtn_OnClick"></Button>
+        </StackPanel>
     </StackPanel>
 </Page>
