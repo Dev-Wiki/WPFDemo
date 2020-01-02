@@ -11,14 +11,14 @@
     <StackPanel>
         <ScrollViewer HorizontalAlignment="Center" VerticalAlignment="Center"
             HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled"
-            Background="White" Focusable="False">
+            Background="Transparent" Focusable="False" Width="300" Cursor="SizeAll">
             <ContentControl 
                 x:Name="ImageControl"
                 MouseLeftButtonDown="ImageControl_OnMouseLeftButtonDown"
                 MouseLeftButtonUp="ImageControl_OnMouseLeftButtonUp"
                 MouseMove="ImageControl_OnMouseMove"
                 MouseWheel="ImageControl_OnMouseWheel">
-                <Image x:Name="PreImage" Width="300" Height="300" Stretch="Uniform"
+                <Image x:Name="PreImage" Stretch="Uniform" RenderOptions.BitmapScalingMode="NearestNeighbor"
                        Source="{StaticResource HeaderImage}">
                     <Image.RenderTransform>
                         <TransformGroup>
