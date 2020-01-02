@@ -6,7 +6,7 @@
         mc:Ignorable="d"
         d:DesignHeight="450" d:DesignWidth="800"
         Width="800" Height="450"
-        Title="MainWindow" >
+        Title="{StaticResource AppName}" >
     <Window.Resources>
     </Window.Resources>
     <TabControl TabStripPlacement="Left">

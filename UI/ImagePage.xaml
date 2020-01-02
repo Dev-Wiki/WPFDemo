@@ -19,7 +19,7 @@
                 MouseLeftButtonUp="ImageControl_OnMouseLeftButtonUp"
                 MouseMove="ImageControl_OnMouseMove"
                 MouseWheel="ImageControl_OnMouseWheel">
-                <Image x:Name="PreImage" Stretch="Fill"
+                <Image x:Name="PreImage" Stretch="Uniform" Width="300" Height="300"
                        Source="{StaticResource HeaderImage512}">
                     <Image.RenderTransform>
                         <TransformGroup>
@@ -33,7 +33,7 @@
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0, 16, 0, 0">
             <Button x:Name="OpenBtn" Content="Open" Click="OpenBtn_OnClick"/>
-            <Button x:Name="RestBtn" Content="Rest" Click="RestBtn_OnClick"></Button>
+            <Button x:Name="ResetBtn" Content="Reset" Click="ResetBtn_OnClick"></Button>
         </StackPanel>
     </StackPanel>
 </Page>

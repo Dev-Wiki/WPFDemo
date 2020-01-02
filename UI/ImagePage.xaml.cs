@@ -1,8 +1,11 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
-using Microsoft.Win32;
+using System.Windows.Media.Imaging;
+using MouseEventArgs = System.Windows.Input.MouseEventArgs;
 
 namespace WPFDemo.UI {
     /// <summary>
@@ -66,21 +69,38 @@ namespace WPFDemo.UI {
         }
 
         private void OpenBtn_OnClick(object sender, RoutedEventArgs e) {
+            OpenFileDialog dialog = new OpenFileDialog {Filter = (string)FindResource("ImageFilter")};
+            DialogResult result = dialog.ShowDialog();
+            if (result == System.Windows.Forms.DialogResult.Cancel) {
+                return;
+            }
+
+            string filePath = dialog.FileName;
+            ResetTransform();
+            PreImage.Source = new BitmapImage(new Uri(filePath));
+            dialog.Dispose();
         }
 
-        private void RestBtn_OnClick(object sender, RoutedEventArgs e) {
-            if (PreImage.RenderTransform is TransformGroup transformGroup) {
-                if (transformGroup.Children[0] is TranslateTransform translateTransform) {
+        private void ResetTransform() {
+            if (PreImage.RenderTransform is TransformGroup transformGroup)
+            {
+                if (transformGroup.Children[0] is TranslateTransform translateTransform)
+                {
                     translateTransform.X = 0;
                     translateTransform.Y = 0;
                     StartPoint = new Point(0, 0);
                 }
 
-                if (transformGroup.Children[1] is ScaleTransform scaleTransform) {
+                if (transformGroup.Children[1] is ScaleTransform scaleTransform)
+                {
                     scaleTransform.ScaleX = 1;
                     scaleTransform.ScaleY = 1;
                 }
             }
+        }
+
+        private void ResetBtn_OnClick(object sender, RoutedEventArgs e) {
+            ResetTransform();
         }
     }
 }
