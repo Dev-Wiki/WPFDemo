@@ -20,8 +20,7 @@ namespace WPFDemo.DataBinding
     /// </summary>
     public partial class DataBindingPage : Page
     {
-        public DataBindingPage()
-        {
+        public DataBindingPage() {
             InitializeComponent();
         }
     }

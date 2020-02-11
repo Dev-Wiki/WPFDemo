@@ -4,20 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
+        xmlns:local="clr-namespace:WPFDemo.DataBinding"
         d:DesignHeight="450" d:DesignWidth="800"
         Width="800" Height="450"
         Title="{StaticResource AppName}" >
     <Window.Resources>
     </Window.Resources>
-    <TabControl TabStripPlacement="Left">
-        <TabItem Header="UI">
-            <Frame Source="UI/UIPage.xaml"/>
-        </TabItem>
-        <TabItem Header="Data">
-            <Frame Source="Data/DataPage.xaml"/>
-        </TabItem>
-        <TabItem Header="Network">
-            <Frame Source="Network/NeworkPage.xaml"/>
-        </TabItem>
-    </TabControl>
+    <Grid>
+        <TabControl TabStripPlacement="Left">
+            <TabItem Header="UI">
+                <Frame Source="UI/UIPage.xaml"/>
+            </TabItem>
+            <TabItem Header="Data">
+                <Frame Source="Data/DataPage.xaml"/>
+            </TabItem>
+            <TabItem Header="DataBinding">
+                <Frame Source="DataBinding/DataBindingPage.xaml"/>
+            </TabItem>
+            <TabItem Header="Network">
+                <Frame Source="Network/NeworkPage.xaml"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
 </Window>

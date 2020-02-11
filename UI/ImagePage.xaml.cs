@@ -72,13 +72,13 @@ namespace WPFDemo.UI {
             OpenFileDialog dialog = new OpenFileDialog {Filter = (string)FindResource("ImageFilter")};
             DialogResult result = dialog.ShowDialog();
             if (result == System.Windows.Forms.DialogResult.Cancel) {
+                dialog.Dispose();
                 return;
             }
 
             string filePath = dialog.FileName;
             ResetTransform();
             PreImage.Source = new BitmapImage(new Uri(filePath));
-            dialog.Dispose();
         }
 
         private void ResetTransform() {

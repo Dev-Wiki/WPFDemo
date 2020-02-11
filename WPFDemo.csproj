@@ -13,7 +13,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>WPFDemo</RootNamespace>
     <AssemblyName>WPFDemo</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -41,9 +41,37 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>WPFDemo.App</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.12.0.21496, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ApplicationInsights.2.12.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.Log4NetAppender, Version=2.12.0.21496, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ApplicationInsights.Log4NetAppender.2.12.0\lib\net45\Microsoft.ApplicationInsights.Log4NetAppender.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.4.6.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,12 +94,16 @@
     <Compile Include="DataBinding\DataBindingPage.xaml.cs">
       <DependentUpon>DataBindingPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataBinding\DataBindingViewModule.cs" />
+    <Compile Include="DataBinding\Person.cs" />
+    <Compile Include="DataBinding\QueryCommand.cs" />
     <Compile Include="Data\DataPage.xaml.cs">
       <DependentUpon>DataPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Network\NeworkPage.xaml.cs">
       <DependentUpon>NeworkPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="UI\ImagePage.xaml.cs">
       <DependentUpon>ImagePage.xaml</DependentUpon>
     </Compile>
@@ -81,6 +113,8 @@
     <Compile Include="UI\UIPage.xaml.cs">
       <DependentUpon>UIPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Utils\Log.cs" />
+    <Compile Include="Utils\UIUtils.cs" />
     <Page Include="DataBinding\DataBindingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

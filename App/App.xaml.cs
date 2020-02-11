@@ -11,5 +11,12 @@ namespace WPFDemo {
     /// Interaction logic for App.xaml
     /// </summary>
     public partial class App : Application {
+
+        private string AppName;
+
+        public string Name {
+            get => AppName;
+            set => AppName = value;
+        }
     }
 }
